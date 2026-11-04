@@ -1,0 +1,16 @@
+{
+  "name": "ProDaLiDE Injector",
+  "description": "Injects live DOM editing script from local PHP server.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": { "default_title": "Run ProDaLiDE" },
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://*","https://*" ],
+  "background": { "service_worker": "background.js" },
+    "icons": {"128": "icon128.png"},
+    "web_accessible_resources": [{
+    "resources": ["injected.js"],
+    "matches": ["<all_urls>"]
+  }]
+
+}
